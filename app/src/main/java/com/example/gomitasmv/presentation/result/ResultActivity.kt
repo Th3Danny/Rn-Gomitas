@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.gomitasmv.databinding.ActivityResultBinding
-import com.example.gomitasmv.domain.model.ButtonClassification
+import com.example.gomitasmv.domain.model.GomitasClassification
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -82,7 +82,7 @@ class ResultActivity : AppCompatActivity() {
         }
     }
 
-    private fun displayClassificationResult(classification: ButtonClassification) {
+    private fun displayClassificationResult(classification: GomitasClassification) {
         Log.d("PredictionDebug", "Probabilities: ${classification.allProbabilities}")
         Log.d("PredictionDebug", "Confidence: ${classification.confidence}")
 

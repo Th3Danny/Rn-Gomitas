@@ -6,14 +6,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.gomitasmv.data.model.ApiResult
-import com.example.gomitasmv.domain.usecase.ClassifyButtonUseCase
+import com.example.gomitasmv.domain.usecase.ClassifyGomitasUseCase
 import kotlinx.coroutines.launch
 import java.io.File
 
 
 class ResultViewModel : ViewModel() {
 
-    private val classifyButtonUseCase = ClassifyButtonUseCase()
+    private val classifyButtonUseCase = ClassifyGomitasUseCase()
 
     // Estado de la UI
     private val _uiState = MutableLiveData(ResultState())

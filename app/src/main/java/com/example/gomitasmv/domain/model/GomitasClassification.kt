@@ -1,10 +1,10 @@
 package com.example.gomitasmv.domain.model
 
-import com.example.gomitasmv.data.model.ButtonStatus
+import com.example.gomitasmv.data.model.GomitasStatus
 import java.io.Serializable
 
-data class ButtonClassification(
-    val status: ButtonStatus,
+data class GomitasClassification(
+    val status: GomitasStatus,
     val confidence: Float,
     val allProbabilities: Map<String, Float>,
     val processingTimeSeconds: Float? = null,
