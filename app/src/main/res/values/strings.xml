@@ -18,9 +18,7 @@
 
     <!-- Estado del sistema -->
     <string name="system_status">Estado del sistema</string>
-    <string name="api_status_checking">Verificando conexión al servicio...</string>
-    <string name="api_status_connected">Conectado al servicio de análisis</string>
-    <string name="api_status_disconnected">Desconectado - Reintentando...</string>
+
     <string name="api_status_icon">Ícono de estado API</string>
     <string name="classes_loading">Cargando modelos disponibles...</string>
     <string name="available_models">Modelos disponibles</string>

@@ -8,4 +8,6 @@
     <item name="btnCamera" type="id" />
     <item name="tvApiStatus" type="id" />
     <item name="tvAvailableClasses" type="id" />
+    <item name="tvPredictedClass" type="id" />
+
 </resources>

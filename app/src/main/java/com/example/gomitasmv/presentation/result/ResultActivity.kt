@@ -2,6 +2,7 @@ package com.example.gomitasmv.presentation.result
 
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -33,8 +34,8 @@ class ResultActivity : AppCompatActivity() {
         // Configurar observadores
         setupObservers()
 
-        // Configurar listeners
-        setupListeners()
+//        // Configurar listeners
+//        setupListeners()
 
         // Procesar la imagen recibida
         processReceivedImage()
@@ -54,11 +55,11 @@ class ResultActivity : AppCompatActivity() {
         binding.tvAnalyzing.visibility = if (state.isLoading) View.VISIBLE else View.GONE
 
         // Deshabilitar botones durante la carga
-        binding.btnAnalyzeAgain.isEnabled = !state.isLoading
-        binding.switchEnhance.isEnabled = !state.isLoading
-
-        // Actualizar estado del switch
-        binding.switchEnhance.isChecked = state.enhanceImage
+//        binding.btnAnalyzeAgain.isEnabled = !state.isLoading
+//        binding.switchEnhance.isEnabled = !state.isLoading
+//
+//        // Actualizar estado del switch
+//        binding.switchEnhance.isChecked = state.enhanceImage
 
         // Cargar imagen si existe
         state.selectedImageFile?.let {
@@ -82,8 +83,15 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun displayClassificationResult(classification: ButtonClassification) {
-        // Mostrar la clase predicha
-        binding.tvPredictedClass.text = "Resultado: ${classification.status.name.lowercase().capitalize()}"
+        Log.d("PredictionDebug", "Probabilities: ${classification.allProbabilities}")
+        Log.d("PredictionDebug", "Confidence: ${classification.confidence}")
+
+        // Determina la clase con la mayor probabilidad
+        val predictedClass = classification.allProbabilities.maxByOrNull { it.value }?.key ?: "Unknown"
+        Log.d("PredictionDebug", "Predicted Class: $predictedClass")
+
+        // Actualiza el TextView con la clase predicha
+        binding.tvPredictedClass.text = "Resultado: ${predictedClass.lowercase().capitalize()}"
 
         // Mostrar la confianza de la predicción
         val confidencePercent = (classification.confidence * 100).toInt()
@@ -113,23 +121,24 @@ class ResultActivity : AppCompatActivity() {
         binding.noImageReceived.visibility = View.GONE
     }
 
-    private fun setupListeners() {
-        // Botón para volver a analizar
-        binding.btnAnalyzeAgain.setOnClickListener {
-            // Usar el valor actual del switch de mejora
-            viewModel.predictImage(binding.switchEnhance.isChecked)
-        }
 
-        // Botón para volver a la pantalla principal
-        binding.btnBack.setOnClickListener {
-            finish()
-        }
-
-        // Switch para habilitar/deshabilitar la mejora de imagen
-        binding.switchEnhance.setOnCheckedChangeListener { _, isChecked ->
-            viewModel.setEnhanceImage(isChecked)
-        }
-    }
+//    private fun setupListeners() {
+//        // Botón para volver a analizar
+//        binding.btnAnalyzeAgain.setOnClickListener {
+//            // Usar el valor actual del switch de mejora
+//            viewModel.predictImage(binding.switchEnhance.isChecked)
+//        }
+//
+//        // Botón para volver a la pantalla principal
+//        binding.btnBack.setOnClickListener {
+//            finish()
+//        }
+//
+//        // Switch para habilitar/deshabilitar la mejora de imagen
+//        binding.switchEnhance.setOnCheckedChangeListener { _, isChecked ->
+//            viewModel.setEnhanceImage(isChecked)
+//        }
+//    }
 
     private fun processReceivedImage() {
         // Obtener la URI de la imagen desde el intent

@@ -99,13 +99,13 @@ class MainActivity : AppCompatActivity() {
         progressBar.visibility = if (state.isLoading) View.VISIBLE else View.GONE
 
         // Estado de la API
-        tvApiStatus.text = state.apiStatusText
-        tvApiStatus.setTextColor(
-            ContextCompat.getColor(
-                this,
-                if (state.isApiConnected) R.color.green else R.color.red
-            )
-        )
+//        tvApiStatus.text = state.apiStatusText
+//        tvApiStatus.setTextColor(
+//            ContextCompat.getColor(
+//                this,
+//                if (state.isApiConnected) R.color.green else R.color.red
+//            )
+//        )
 
         // Clases disponibles
         tvAvailableClasses.text = state.availableClassesText
