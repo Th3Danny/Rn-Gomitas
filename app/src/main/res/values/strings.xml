@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GomitasMV</string>
+    <string name="app_title">Análisis de Gomitas por IA</string>
+    <string name="app_subtitle">Sistema de visión artificial para control de calidad</string>
+    <string name="app_logo">Logo de la aplicación</string>
+
+    <!-- Instrucciones -->
+    <string name="how_it_works">Cómo funciona</string>
+    <string name="instructions">Esta aplicación utiliza redes neuronales para analizar y clasificar gomitas. Toma una foto o selecciona una imagen de tu galería para comenzar el análisis. El sistema detectará la calidad, forma y posibles defectos en tiempo real.</string>
+
+    <!-- Opciones de análisis -->
+    <string name="analyze_options">Opciones de análisis</string>
+    <string name="select_image_method">Selecciona un método para obtener la imagen</string>
+    <string name="choose_option">Elegir opción</string>
+    <string name="take_photo">Tomar foto</string>
+    <string name="gallery">Galería</string>
+
+    <!-- Estado del sistema -->
+    <string name="system_status">Estado del sistema</string>
+    <string name="api_status_checking">Verificando conexión al servicio...</string>
+    <string name="api_status_connected">Conectado al servicio de análisis</string>
+    <string name="api_status_disconnected">Desconectado - Reintentando...</string>
+    <string name="api_status_icon">Ícono de estado API</string>
+    <string name="classes_loading">Cargando modelos disponibles...</string>
+    <string name="available_models">Modelos disponibles</string>
+
+    <!-- Íconos y elementos de UI -->
+    <string name="status_icon">Ícono de estado</string>
+    <string name="instruction_icon">Ícono de instrucciones</string>
+    <string name="help">Ayuda</string>
+
+    <!-- Pantalla de resultados -->
+    <string name="analysis_result">Resultado del análisis</string>
+    <string name="analyzed_image">Imagen analizada</string>
+    <string name="original">Original</string>
+    <string name="enhanced">Mejorada</string>
+    <string name="result_icon">Ícono de resultado</string>
+    <string name="prediction">Predicción</string>
+    <string name="confidence">Confianza:</string>
+    <string name="processing_time_placeholder">Tiempo: 0.000 segundos</string>
+    <string name="class_probabilities">Probabilidades por clase</string>
+    <string name="options">Opciones</string>
+    <string name="enhance_image">Mejorar imagen</string>
+    <string name="export_results">Exportar resultados</string>
+    <string name="share">Compartir</string>
+    <string name="analyze_again">Analizar de nuevo</string>
+    <string name="back">Volver</string>
+    <string name="analyzing">Analizando imagen...</string>
+    <string name="error_processing_image">Error al procesar la imagen</string>
+    <string name="no_image_received">No se recibió ninguna imagen</string>
+</resources>

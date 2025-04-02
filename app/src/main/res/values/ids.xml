@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ivLogo" type="id" />
+    <item name="tvSubtitle" type="id" />
+    <item name="tvInstructions" type="id" />
+    <item name="btnGallery" type="id" />
+    <item name="progressBar" type="id" />
+    <item name="btnCamera" type="id" />
+    <item name="tvApiStatus" type="id" />
+    <item name="tvAvailableClasses" type="id" />
+</resources>
